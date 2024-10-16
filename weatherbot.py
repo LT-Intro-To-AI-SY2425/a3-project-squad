@@ -22,7 +22,8 @@ def main():
         main_weather = weather_data['weather'][0]['description']
         temperature = weather_data['main']['temp']
         print(f"Weather in {city}: {main_weather}")
-        print(f"Temperature: {temperature}°C")
+        temperature = (temperature * 9/5) + 32
+        print(f"Temperature: {temperature}°F")
     else:
         print("City not found!")
 
